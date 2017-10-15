@@ -1,0 +1,18 @@
+h2 New Characters
+
+ul.settings
+	li.char-tag
+		span
+			i.fa.fa-mars
+		span 
+			i.fa.fa-genderless
+		span 
+			i.fa.fa-venus
+	li.char-row(ng-repeat="val in vm.charList track by $index")
+		div.name {{val.name}}
+		div.description {{::val.description}}
+		div(range-select chr="{{::val.name}}" ng-model="val.val" on-switch="vm.saveChar(parms)")
+
+div(style="text-align: right;padding: 2em 1em 0;")
+	button.btn(style="margin-left:1em" ng-click="vm.randomize()") Random
+	button.btn.btn-primary(ng-click="vm.saveChanges()" ladda="vm.saveLoading" ng-disabled="vm.noChanges()") Submit

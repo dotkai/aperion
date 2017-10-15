@@ -1,0 +1,30 @@
+div(ng-switch="vm.showType" ng-class="{'pending-vote': vm.pending}")
+	div.os_poll(ng-switch-when="poll")
+		ul(ng-class="{'voted': vm.alreadyVoted}")
+			li(ng-repeat="option in vm.options" ng-click="vm.vote(option._id)" ng-class="{'selected': option._id===vm.selectedVote}")
+				span.icon
+					i.fa.fa-circle-o(ng-show="!vm.alreadyVoted")
+					i.fa.fa-check-circle.is-selected
+				span.text {{::option.text}}
+		div(style="text-align:right")
+			a(ng-if="vm.canUndoVote()" ng-click="vm.unvote()") Change Vote
+	div.survey_poll(ng-switch-when="survey")
+		div.prompt {{vm.pollText}}
+		ul(ng-class="{'voted': vm.alreadyVoted}")
+			li(ng-repeat="option in vm.options track by $index")
+				div.text {{::option.text}}
+				div.survey_range(survey-range count="5" name="{{$index}}" start-label="Not at all" end-label="Very much" ng-model="option.value")
+			li.submit-button
+				button.btn.btn-primary(ng-click="vm.saveChanges()" ladda="vm.saveLoading" ng-disabled="vm.noChanges()") Submit
+			li.closed-msg-2 (Survey submitted. Check out more recent chapters for another round.)
+	div(ng-switch-when="pending")
+		p.closed-msg-1 ** Poll is closed while new chapter is pending. Please check back {{vm.resultDate}} for an update! **
+	div(ng-switch-when="none")
+		p.closed-msg-1 No voting this week. Please check back {{vm.resultDate}} for an update!
+	div.os_poll.poll_result.ng-cloak(ng-switch-when="result")
+		ul
+			li(ng-repeat="option in vm.options track by $index" ng-class="{'winner': vm.winnerIndex===$index}")
+				span.text {{::option.text}} ({{::option.vote}})
+				span.icon
+					i.fa.fa-road.is-selected
+		div.closed-msg-2 (Poll is closed. Check out more recent chapters to cast a vote.)

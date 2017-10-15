@@ -1,0 +1,26 @@
+{
+	"rawscripts": [
+		"/app.js",
+		"/config.js",
+		"/shared/services/navService.js",
+		"/shared/services/userService.js",
+		"/shared/factories/apiFactory.js",
+		"/shared/factories/accountAuth.apiFactory.js",
+		"/shared/factories/story.apiFactory.js",
+		"/shared/factories/userAuth.apiFactory.js",
+		"/shared/directives/compileDirective.js",
+		"/shared/directives/rangeSelectDirective.js",
+		"/shared/directives/surveyRange.js",
+		"/components/about/about.js",
+		"/components/navbar/navbar.js",
+		"/components/newchars/newchars.js",
+		"/components/settings/settings.js",
+		"/components/login/login.js",
+		"/components/login/completeAccount.js",
+		"/components/story/story.js",
+		"/components/contact/contact.js",
+		"/components/story/pronounWrap.js",
+		"/components/poll/poll.js",
+		"/components/poll/pollService.js"],
+	"minscripts": ["/app.min.js"]
+}

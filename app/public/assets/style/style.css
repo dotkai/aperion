@@ -1,0 +1,476 @@
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.nbar {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.nbar .title {
+	font-size: 2.2em;
+}
+.nbar ul {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 0;
+}
+.nbar .title,
+.nbar li {
+	padding: 6px 12px;
+}
+.nbar li:hover {
+	background: rgba(240,240,240, 0.8);
+	cursor: pointer;
+}
+.nbar li {
+    display: flex;
+    align-items: center;
+}
+.nbar .title:hover {
+	cursor: pointer;
+}
+.navdrop .dropshow {
+    background: #fff;
+    display: none;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -12px;
+    padding: 1em 6px;
+    border: 1px solid #888;
+    border-top: none;
+    flex-direction: column;
+    min-width: 100px;
+    box-shadow: 1px 1px 10px -5px #000;
+}
+.navdrop:hover .dropshow {
+    display: flex;
+}
+.rbuff {
+    margin-right: 1em;
+}
+
+.ngdialog-overlay {
+	background: rgba(255,255,255,0.9);
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+	background: #fff;
+    box-shadow: 3px 3px 10px -5px #000;
+    border: 1px solid #d0d0d0;
+}
+.social {
+    display: flex;
+    align-items: center;
+}
+.social a {
+    padding: 1em;
+}
+
+.story-wrapper {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 500px;
+}
+
+.story-button {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 50px;
+}
+.story-button.ap-hide {
+	color: transparent;
+    pointer-events: none;
+}
+
+.story-button:hover {
+	cursor: pointer;
+	background: rgba(240,240,240, 0.8);
+}
+.story-button.ap-hide:hover {
+	cursor: default;
+	background: none;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;    
+    padding: 0 2em;
+    margin: 0 auto;
+    font-size: 1.2em;
+    max-width: 800px;
+}
+.story img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.ap-poll {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 2.5em 0 1em;
+}
+
+.pending-vote {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.os_poll {
+	width: 400px;
+}
+
+.os_poll ul {
+    border: 1px solid #e0e0e0;
+}
+
+.os_poll .voted,
+.os_poll.poll_result {
+    pointer-events: none;
+}
+
+.os_poll li {
+    position: relative;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 2em;
+}
+
+.os_poll ul.voted li.selected {
+    background: #95EF93;
+}
+
+.os_poll ul:hover li:hover {
+    cursor: pointer;
+    background: #e0e0e0;
+    opacity: 1;
+}
+
+.os_poll ul.voted:hover li:hover {
+    cursor: default;
+    background: none;
+}
+
+.os_poll ul:hover > li:not(:hover) {
+    opacity: 0.5;
+}
+.os_poll ul.voted:hover > li:not(:hover) {
+    opacity: 1;
+}
+
+.os_poll li span.icon {
+    position: absolute;
+}
+
+.os_poll li span.text {
+    margin-left: 3em;
+}
+
+.os_poll .is-selected {
+    display: none;
+}
+.os_poll .selected .is-selected {
+    display: inline;
+}
+
+.os_poll.poll_result li {
+    opacity: 0.5;
+}
+.os_poll.poll_result li.winner {
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+    background: #e0e0e0;
+    font-size: 1.2em;
+}
+.os_poll.poll_result li.winner .is-selected {
+    display: inline;
+    font-weight: 700;
+}
+.os_poll.poll_result li span.icon {
+    position: static;
+}
+.closed-msg-1 {
+    font-size: 1.2em;
+    color: orangered;
+    text-align: center;
+}
+.closed-msg-2 {
+    font-size: 0.8em;
+    text-align: center;
+    opacity: 0.8;
+}
+
+
+.settings {
+   max-width: 800px;
+    margin: 0 auto; 
+}
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.char-row {
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-transform: capitalize;
+    height: 2.5em;
+    margin-top: .5em;
+    border-bottom: 1px solid #efefef;
+}
+.char-row .name {
+    min-width:10%;
+    font-size: 1.5em;
+}
+.char-row .description {
+    width:100%;
+}
+
+.char-save-row {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    padding: 12px 0;
+    width: 100%;
+    border-top: 1px solid #d0d0d0;
+}
+
+.char-tag {
+    text-align: right;
+    padding: 0 5px;
+}
+.char-tag span {
+    display: inline-block;
+    margin: 0px 8px;
+    font-size: 2em;
+    width: 1em;
+    text-align: center;
+}
+
+.ngdialog.ngdialog-theme-default.dialog-wide .ngdialog-content {
+    width: 90%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ngdialog-content .button-row {
+    text-align: right;
+}
+
+/***
+*	Large Radio Buttons
+***/
+.radio-row {
+	display: flex;
+}
+.lrg-radio {
+	display: inline-block;
+    position: relative;
+    width: 3em;
+}
+.lrg-radio input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+.lrg-radio.checked .check,
+.lrg-radio.checked:hover .check {
+    border: 5px solid #0DFF92;
+}
+.lrg-radio.checked .check::before{
+  background: #0DFF92;
+}
+.lrg-radio .check {
+	display: block;
+    position: absolute;
+    border: 5px solid #AAAAAA;
+    border-radius: 100%;
+    height: 31px;
+    width: 31px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+.lrg-radio:hover .check {
+  border: 5px solid #000;
+  cursor: pointer;
+}
+.lrg-radio .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 3px;
+    left: 3px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+
+
+div.check-wrapper {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+div.check-wrapper > span {
+    margin-right: 1em;
+}
+
+input.lrg-checkbox {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input.lrg-checkbox:checked {
+    text-align: center;
+}
+input.lrg-checkbox:checked:before {
+    content: "\2714";
+    font-size: 1.7em;
+    top: -5px;
+    position: relative;
+}
+input.lrg-checkbox:hover,
+input.lrg-checkbox:focus {
+    cursor: pointer;
+    outline: none;
+}
+
+/***************
+* SURVEY
+***************/
+.survey_poll li {
+    display: flex;
+    height: 35px;
+    margin: 1em 0;
+    font-style: italic;
+    justify-content: space-between;
+}
+
+.survey_poll .text,
+.survey_poll .prompt {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.survey_range {
+    display: flex;
+}
+
+.survey_range .start-label {
+    padding-right: 1em;
+}
+
+.survey_poll .voted .lrg-radio:hover .check {
+    border: 5px solid #aaa;
+    cursor: default;
+}
+
+.survey_poll .submit-button {
+    justify-content: flex-end;
+}
+.survey_poll .voted .submit-button,
+.survey_poll .closed-msg-2 {
+    display: none;
+}
+
+.survey_poll .voted .closed-msg-2 {
+    display: block;
+}
+
+/*************
+* LOGIN PAGE
+**************/
+.login .intro {
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+}
+.login ol.instructions {
+    list-style-type: decimal;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+.login h1, .login div, .login ul {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+.login ul li:before {
+    content:'\00ce';
+    padding: 0 5px;
+}
+.login li:first-child:before {
+    content: '';
+}
+a:hover {
+    cursor: pointer;
+}
+.login-buttons a {
+    margin: 0 10px;
+    min-width: 100px;
+}
+
+/***
+* RAW TEXT
+***/
+.normal {
+    padding: 0 3em 2.5em;
+}
+.normal ol {
+    margin-left: 3em;
+}
+.normal ol li {
+    margin-left: 1em;
+    padding-left: 1em;    
+    list-style-type: decimal; 
+}
+.normal .bold {
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 3em;
+}
+.normal .title {
+    font-weight: 700;
+}
+.normal .example {
+    opacity: 0.8;
+    font-weight: 700;
+    margin-left: 3em;
+    padding-left: 1em;
+    border-left: 2px solid #333;
+}
+.normal p {
+    display: block;
+}

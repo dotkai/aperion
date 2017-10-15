@@ -1,0 +1,5 @@
+div.story
+	h1(style="text-transform: capitalize;padding-bottom: 0.5em;text-align: center;") {{vm.path}} - {{vm.chapter}} - {{vm.part}}
+	div(pronoun-wrap path="vm.path" chapter="vm.chapter" part="vm.part")
+
+ap-poll.ap-poll(path="vm.path" chapter="vm.chapter" poll-options="vm.chptData")

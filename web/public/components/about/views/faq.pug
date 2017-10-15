@@ -1,0 +1,85 @@
+div.normal
+	h1 FAQ
+
+	ul
+		li(ng-repeat="tag in vm.tags")
+			a(ng-click="vm.gotoAnchor(tag.anchor)") {{tag.text}}
+
+	ul
+		li(id="what")
+			h3 What is Apeiron?
+			ol
+				li A web serial inspired by light and visual novels.
+				li A marketing ploy of self promotion because I suck at that.
+				li Motivation to draw pictures, practice foreign languages, and do NLP/Data Science things
+				li An imaginary Master's thesis of a software developer interested in linguistics, neurology, and their influence on the evolution of ideas, but doesn't want to do the grad-school thing.
+				li A psychological experiment to explore how gendered language influences reader expectations of a character as they grow over the course of a story.
+				li A personal growth challenge.
+				li A story about people in the world of Passim.
+		li(id="where")
+			h3 Where does Apeiron take place?
+			p Passim. It's a world created by the supreme beings: Rock, Paper, Scissors.
+		li(id="chapter")
+			h3 How does chapter release work?
+			p I release a chapter on Monday (or Sunday night). Readers vote on how they wish the story to continue by Friday (midnight, PDT). I write the next chapter over the weekend. Repeat.
+		li(id="terms")
+			h3 What is the Readship Agreement and where can I read it?
+			p The Readership Agreement (alternatively known as "Terms of Service") is an agreement form that you consent to that says I'm collecting data, you agree to let me collect and publish data you have contributed to, the story is copyright to myself as the author (regardless of pronoun/gendered-word variations), and any other privacy, legal, or knitpick nuiances relevant to that. You can read it: 
+				a(ui-sref="terms") HERE
+		li("why")
+			h3 Why pronouns?
+			p Choosing the pronouns of a character is an important process for any author because it has a heavy influence for how readers perceive the character, how other characters perceive them, how they fit and function and hold expectations for themselves in their society, etc. Because of this, tropes develop. Double standards spawn. Girls hitting people is comical; boys hitting people is a personality problem. The love of a father is rarely considered on equal terms as the love of a mother, even though men go full warpath when their children are kidnapped and women battle the authorities for basic human rights. Women wait for heroes. Men must be fixed. In many stories, you can even predict how shipping/romantic sub-plots will happen based on the "who is male and who is female connect-a-dots" game.
+			p Quite frankly, that's boring. And as we writers tell new stories, we perpetutate the tropes for yet another generation and the stories become normal, how we see each other, how we see ourselves.
+			p And then there is the notion of gendered language to begin with. But that's another rant...
+			p I want to see if any of that actually holds true. I believe it does.
+			p However, no matter what coin-flip chromosomes a character has, first and foremost, they are a person. They have hopes, dreams, fears, and flaws. It is a challenge to myself to ensure every character meets that standard -- that an engaging story can be told -- and if either is at all possible to do by making a core identity of the character flexible to the preference of a reader.	
+		li("path")
+			h3 What is a story path?
+			p The storyline of a given MC.
+		li(id="mc")
+			h3 Who and what are the MC?
+			p MC is short for main character from whose POV (point of view) the story is told. Each MC is a different race or species, with their own respective talents, abilities, occupation, etc. The main characters are as follows:
+			ol
+				li Go - a human
+				li Theta - a messenger
+				li Quest - an archer
+				li Vivid - an assasin
+				li Click - a shadow
+				li San & Sei - twin fish
+				li Mine - a shifter
+			p MCs can be "unlocked" by certain events or actions taken by known MC as they travel throughout Passim. They may become allies. They may become foes. You know how Dating Sims work, right? Imagine that without the "dating" part.
+		li(id="ties")
+			h3 What happens if there is a tie?
+			p I vote on stories too. If my vote results in a tie, I will withdraw it. If there is a three way tie, coin flip.
+		li(id="questions")
+			h3 What determines what voting options there are on the poll? 
+			p There are 3 parameters: Believability, Character Personality, and a third which I will not disclose but may become obvious over time.
+		li(id="correct")
+			h3 Is there a "correct" option in the poll?
+			p No. However, per the story rules and the general nature of CYOA stories, there is no plot armor. The consequences of path choices are not random -- they also can (and will) affect choices of the future. Characters, including the MC, can lose limbs, become incapacitated, or die. Some choices are more favorable than others for this reason.
+		li(id="rules")
+			h3 How do I petition rule change?
+			p All rules are non-negotiable.
+		li(id="pronouns")
+			h3 Do you know what pronouns I've assigned the characters or my voting history?
+			p tldr: I can figure it out, but I won't try to.
+			p When you sign up for Apeiron, you (ie: your login information) is assigned a random id. Your login information includes an email. However, all pronouns and voting history are associated with the random id and are kept in a seperate location from the email.
+			p Can I connect an email to the data associated via the id? Yes. However, this will violate the integrity of the data. It may create personal bias that further influences the story, which is something I wish to minimize in this project because that defeats the point of it. Therefore, this is not something I will do.
+		li(id="author")
+			h3 Who is the author?
+			p KAI. It's short for: Knackered Artificial Intelligence. At least on Mondays.
+		li(id="errors")
+			h3 I discovered typos, grammar errors, lack of clarity, etc.. How can I contact you to fix them?
+			p Refer to my contact page: 
+				a(ui-sref="contact") HERE
+			p You can also contact me on our facebook page:
+				a(href="https://www.facebook.com/apeironProject/") HERE
+		//- li(id="offended")
+			h3 Optional pronouns and gender neutral language, seriously? What, the libtards now want to turn all pronouns in a story into options? The PC culture agenda is going way too far!
+			p While rhetorical, I felt I should answer this question for people who don't want to gloat to the world they're an idiot:
+			ol				
+				li I'm not a liberal. I'm a Utilitarian Stoic.
+				li If you're not one of my readers, your opinion of what I write is as irrelevant and useless to me as my opinion of Starbuck's coffee is to Starbucks.
+				li I don't encourage other writers to follow suit for the simple sake this project is tedious and we all have better things to do.
+				li There are several million books in the world and several thousand web series with pronouns you don't have to think about. Why the *bleep* is mine so detrimental to your existence you have to go around and advertise it for me like the mental virus of absurdity I intend it to be?
+				li Please check out my upcoming book series: Blood Mark. It features everything from rape to suicide to child sex slavery to ethnic genocide to caste-based lingo, for all your uncoddled, cruel world needs. Sexism, terrorism, racism, necropolitics galor. Some inferior characters are even called "it." What fun!

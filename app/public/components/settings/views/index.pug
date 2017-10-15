@@ -1,0 +1,28 @@
+ul.settings.filter
+	//- li Sort
+		select(ng-model="vm.sort")
+			option(value="alpha") A -> Z
+			option(value="-alpha") Z -> A
+			option(value="age") Oldest -> Newest
+			option(value="-age") Newest -> Oldest
+	li Search 
+		input(ng-model="search" ng-change="vm.updateSearchFilter(search)")
+	//- li Advanced
+		ul
+			li Race
+
+
+ul.settings
+	//- li.char-tag
+		span Male
+		span Neut
+		span Fem
+	li.char-row(ng-repeat="val in vm.filteredCharacters track by val.name")
+		div.name {{::val.name}}
+		div.description {{::val.description}}
+		//- div(range-select chr="{{::val.name}}" ng-model="val.val" on-switch="vm.saveChar(parms)")
+
+//- div.char-save-row
+	div.settings
+		button.btn(ng-click="vm.clearChanges()") Cancel
+		button.btn.btn-primary(ng-click="vm.saveChanges()" ladda="vm.saveLoading" ng-disabled="vm.noChanges()") Update

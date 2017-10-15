@@ -1,0 +1,38 @@
+div.nbar
+	div(style="display:inherit;")
+		div.title(ui-sref="home") Apeiron
+		div.social
+			div.fb-like(data-href="https://www.facebook.com/Apeiron-1521193731225751/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true")
+			//- a(href="https://www.facebook.com/Apeiron-1521193731225751/")
+				i.fa.fa-facebook
+		//- li
+			i.fa.fa-twitter
+		//- li
+			i.fa.fa-medium
+	ul.ng-cloak(ng-if="vm.data.userSet")
+		li(ng-click="vm.prev()" ng-if="vm.hasPrevious()") << Previous
+		li 
+			select(ng-model="vm.currentChapterModel" ng-options="item as ('Chapter ' + item.chapter + '(' + item.part + ')') for item in vm.chapterPartList" ng-change="vm.goToPage()")
+		li(ng-click="vm.next()" ng-if="vm.hasNext()") Next >>
+	ul
+		//- li(ng-show="vm.data.userSet" ui-sref="home") Last Read ({{vm.getCurrent()}})
+		//- li(ng-show="vm.data.userSet" ui-sref="story({number: 1})") First
+		li.navdrop About
+			div.dropshow
+				a(ui-sref="faq") FAQ
+				a(ui-sref="rules") Story Rules
+				a(ui-sref="terms") Readership Agreement
+				a(ui-sref="privacy") Privacy Policy
+				a(href="https://docs.google.com/forms/d/e/1FAIpQLSfL7-9tay3bYSDkUp8czz547oS1WfAbAP6voRfpzfjb7pVmZA/viewform?usp=sf_link") Contact
+		li.ng-cloak(ui-sref="settings" ng-show="vm.data.userSet") Characters
+		li.ng-cloak(ng-show="!vm.data.userSet" style="    border-left: 1px solid #d0d0d0;font-weight: 700;") 
+			span.rbuff Login: 
+			a.btn.btn-social-icon.btn-facebook.btn-sm.rbuff(ng-click="vm.fbSignup()")
+				i.fa.fa-facebook
+			//- a.btn.btn-social-icon.btn-twitter(ng-click="vm.twitterSignup()")
+				i.fa.fa-twitter
+			a.btn.btn-social-icon.btn-google.btn-sm(ng-click="vm.googleSignup()")
+				i.fa.fa-google
+
+		li.btn.ng-cloak(ng-show="vm.data.userSet" ng-click="vm.logout()")
+			i.fa.fa-sign-out

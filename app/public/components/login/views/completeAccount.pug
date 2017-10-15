@@ -1,0 +1,17 @@
+div.check-wrapper
+	span
+		input.lrg-checkbox(type="checkbox" ng-model="vm.acceptTerms") 
+	label I have read and agree to the 
+		a(ng-click="vm.open('terms')") Readership Agreement
+		| , and the 
+		a(ng-click="vm.open('privacy')") Privacy Policy
+		| .
+div.check-wrapper
+	span
+		input.lrg-checkbox(type="checkbox" ng-model="vm.mailingList") 
+	label I wish to sign up for the Apeiron mailing list.
+
+div(ng-if="vm.err" style="color: red; border-top: 1px dashed lightgrey; padding: 1em;font-weight: 700;")
+	span {{vm.err}}
+div(style="text-align: right;")
+	button.btn.btn-primary(ng-click="vm.submit()" ladda="vm.saveLoading" ng-disabled="!vm.acceptTerms") Submit

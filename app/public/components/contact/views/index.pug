@@ -1,0 +1,38 @@
+div.normal To report website bugs and grammar, spelling, or syntax errors, I can be contacted via email: dotkaimail [at] gmail [dot] com
+div.normal Please include [Apeiron] in the subject line.
+
+//- div.normal
+	p.title To report website bugs and grammar, spelling, or syntax errors, I can be contacted via email: 
+	p.bold kdsonderling [at] gmail.com
+	p For bugs or errors in a chapter, please include:
+		ol
+			li [Apeiron] tag
+			li Path name
+			li Chapter number
+	p.bold Eg: [Apeiron] Go-2, typo
+	p For bugs or errors on a given page, also include:
+		ol
+			li [Apeiron] tag
+			li Page name (For pages like contact, login, etc.)
+	p.bold Eg: [Apeiron] FAQ, typo
+	p Any bugs or errors reported without this information will be ignored. All Apeiron related emails without appropriate tags will be sent to spam. I will only reply to emails to confirm if the bug or error is fixed.
+
+//- div.normal
+	p.title For private inquiries:
+	p I do not accept private inquiries at the above address. 
+
+	//- This is a social experiment and I seek to make as much information as possible accessible to other participants. Contact me publicly via my social media channels. If I receive a private inquery at the above address, I'll assume you don't mind your email being part of a screenshot and your message answered publically on said social media.
+ 
+//- form(name="vm.contact")
+	div
+		span Email:
+		span {{vm.email}}
+
+	div
+		span Subject:
+		select
+			option(selected disabled hidden value="") -- Select --
+			option Website Bug
+			option Grammar, Spelling, Syntax Error
+			option General Inquiries
+	textarea
