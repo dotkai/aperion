@@ -8,8 +8,8 @@ module.exports = {
 		GOOGLE: 'GOOGLE'
 	},
 	facebookAuth: {
-		clientID: '291091971267525',
-		clientSecret: 'b832748d3531e5d51d7162fa75ca2be7',
+		clientID: 'z',
+		clientSecret: 'z',
 		callbackURL: '/auth/facebook/callback'
 	},
 	
@@ -20,8 +20,8 @@ module.exports = {
 	},
 
 	googleAuth: {
-		clientID:'605356420169-3ea7rg9v0n392ndohpv1bvkngkjkl7di.apps.googleusercontent.com',
-		clientSecret: 'xgiS0iy4UQqCx3YYfer0iMPY',
+		clientID:'z',
+		clientSecret: 'z',
 		callbackURL: '/auth/google/callback'
 	},
 

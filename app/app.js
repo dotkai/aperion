@@ -35,12 +35,12 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(methodOverride());
-app.use(cookieParser(process.env.SECRET || 'fake_secret'));
+app.use(cookieParser(process.env.SECRET || 'z'));
 app.use("/app", express.static(path.join(__dirname, 'public'), { maxAge: 0 }));
 
 // Setting up session
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'onceuponthestairimetamenwhowasntthere', // should be a large unguessable string or Buffer 
+  secret: process.env.SESSION_SECRET || 'z', // should be a large unguessable string or Buffer 
   duration: 24 * 60 * 60 * 1000, // how long the session will stay valid in ms 
   resave: true,
   saveUninitialized: true
@@ -49,7 +49,7 @@ app.use(session({
 // Required for passport
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(passport.authenticate('remember-me'));
+app.use(passport.authenticate('z'));
 
 // ROUTES ======================================================================
 require('./routes/routes.js')(app); // load our routes and pass in our app and fully configured passport
