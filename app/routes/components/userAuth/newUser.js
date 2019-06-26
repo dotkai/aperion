@@ -5,7 +5,7 @@ var User = require('./models/UserModel')
 	, configAuth = require('./config/auth')
 	, Mailchimp = require('mailchimp-api-v3')
 	, listUniqueId = 'a89c2cdafa'
- 	, mailchimpApi = new Mailchimp('637037fa04bdefe018cd5f4e67e96dbf-us14');;
+ 	, mailchimpApi = new Mailchimp('z');;
 
 module.exports = {
 	queryUserExists: queryUserExists,
